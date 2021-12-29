@@ -9,7 +9,8 @@ pipeline{
         script{
           createS3Bucket('javahome-tf-1212')
         }
-      }    
+      } 
+    }
     stage('terraform init and apply - dev'){
       steps{
         sh returnStatus: true, script: 'terraform workspace new dev'
