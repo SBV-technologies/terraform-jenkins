@@ -1,7 +1,7 @@
 pipeline{
   agent any
   environment{
-    PATH="${PATH}:${get Terraform()}"
+    PATH="${PATH}:${getTerraformPATH()}"
   }
   stages{
     stage('terraform init and apply - dev'){
