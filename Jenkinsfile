@@ -33,5 +33,5 @@ def getTerraformPath(){
 }
 
 def createS3Bucket(bucketName){
-  sh returnStatus: true, script: 'aws s3 mb bucket-name --region=ap-south-1'
+  sh returnStatus: true, script: "aws s3 mb ${bucket-name} --region=ap-south-1"
 }
