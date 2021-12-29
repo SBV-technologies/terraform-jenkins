@@ -7,7 +7,7 @@ pipeline{
     stage('s3 create Bucket'){
       steps{
         script{
-          createS3Bucket('javahome-tf-369')
+          createS3Bucket('javahome-tf-1212')
         }
       } 
     }
