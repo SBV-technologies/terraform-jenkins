@@ -7,9 +7,9 @@ pipeline{
     stage('s3-create bucket'){
       steps{
         sh"ansible-playbook s3-bucket.yml"
-	}
       }
     }
+    
     stage('terraform init and apply - dev'){
       steps{
         sh returns: true, script: 'terraform workspace new dev'
